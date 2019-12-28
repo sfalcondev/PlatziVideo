@@ -1,0 +1,202 @@
+ /* funciones de scss*/
+ 
+$blanco: white;
+
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+/* fin funciones de scss*/
+
+
+
+body {
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+}
+
+.header {
+@extend.flex;
+/* para jalar el mixin es (@include flex )- align-items: center;   heredado  */ 
+background-color: #21c08b;
+color: $blanco;
+/*display: flex;     heredado      */
+height: 100px;
+justify-content: space-between;
+top: 0px;
+width: 100%;
+
+}
+.header__img {
+margin-left: 30px;
+width: 200px;
+}
+.login {
+    background: linear-gradient(#21c08b,#ab88ff); 
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+.login__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 40px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.login__container--form {
+    display: flex;
+    flex-direction: column;    
+}
+.login__container--form label {
+    font-size: 14px;
+}
+.login__container--remenber-me {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+.login__container--remenber-me a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;  
+    
+}
+.login__container--remenber-me a:hover {
+    text-decoration: underline;
+}
+
+.login__container--social-media-twitter {
+    display: flex; 
+    align-items: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+    background-color: #00ACEE;
+    border-radius: 30px;  
+    padding: 0px 30px;
+
+}
+/*para hacer mas pequeño la imagen*/
+.login__container--social-media-twitter >img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.login__container--social-media-google {
+display: flex; 
+align-items: center;
+font-size: 10px;
+margin-bottom: 10px;
+background-color:#DB4A39;  
+border-radius: 30px;  
+padding: 0px 30px;
+}
+/*para hacer mas pequeño la imagen*/
+.login__container--social-media-google >img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+  .login__container--register {
+      font-size: 14px;
+  }
+  .login__container--register a{
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     text-decoration: none;
+  }
+.login__container--register a:hover {
+    text-decoration: underline;
+
+}
+.input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 5px solid white; 
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 20px;
+    outline: none;
+    height: 50px;
+}
+::placeholder {
+    color: white;
+}
+.button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    border: none;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #ab88ff;
+}
+.footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+/*los siguientes pasos son para adaptar a un movil*/
+@media only screen and (max-width: 600px) {
+    .login__container {
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+    .footer {
+        align-items:flex;
+        flex-direction: column;
+        border: none;
+
+    }
+}
+
+
+
+      
+    
+    
+
+
+
+
+   
